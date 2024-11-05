@@ -17,7 +17,7 @@ num_epochs = 10  # 训练次数
 
 # 数据预处理  
 transform = transforms.Compose([  
-    
+    transforms.Resize(224),#ViT通常需要224*224的输入
     transforms.ToTensor(),  # 格式转化  
     transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))  # 归一化  
 ])  
